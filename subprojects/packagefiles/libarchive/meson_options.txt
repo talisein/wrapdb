@@ -1,0 +1,23 @@
+option('progs', type: 'array', choices: ['all', 'bsdtar', 'bsdcat', 'bsdcpio'], value: ['bsdtar', 'bsdcat'],
+  description: 'Which programs should be built')
+
+# enable deps
+option('zlib', type: 'feature', value: 'auto', description: 'Build support for gzip')
+option('bz2lib', type: 'feature', value: 'auto', description: 'Build support for bzip2')
+option('libb2', type: 'feature', value: 'auto', description: 'Build support for BLAKE2')
+option('iconv', type: 'feature', value: 'auto', description: 'Try to link against iconv')
+option('lz4', type: 'feature', value: 'auto', description: 'Build support for lz4')
+option('zstd', type: 'feature', value: 'auto', description: 'Build support for zstd')
+option('lzma', type: 'feature', value: 'auto', description: 'Build support for xz')
+option('lzo2', type: 'feature', value: 'auto', description: 'Build support for lzo')
+option('cng', type: 'feature', value: 'auto', description: 'Build support for CNG (Crypto Next Generation)')
+option('mbedtls', type: 'feature', value: 'auto', description: 'Build support for crypto from mbed TLS')
+option('nettle', type: 'feature', value: 'auto', description: 'Build support for crypto from Nettle')
+option('openssl', type: 'feature', value: 'auto', description: 'Build support for mtree and xar hashes through openssl')
+option('xml2', type: 'feature', value: 'auto', description: 'Build support for xar hashes through libxml2')
+option('expat', type: 'feature', value: 'auto', description: 'Build support for xar hashes through expat')
+option('posix-regex-lib', type: 'combo', choices: ['libc', 'libregex', 'libpcreposix', 'auto', 'none'], value: 'auto', description: 'Choose what library to use for POSIX regular expression support')
+
+# enable features
+option('xattr', type: 'feature', value: 'auto', description: 'Extended Attributes support')
+option('acl', type: 'feature', value: 'auto', description: 'ACL support')

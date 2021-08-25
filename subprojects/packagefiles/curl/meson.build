@@ -1,0 +1,1 @@
+project('curl', 'c', version: '-')

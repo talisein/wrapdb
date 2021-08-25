@@ -1,0 +1,38 @@
+option('ssl', type: 'feature', value: 'auto', description: 'build with TLS support')
+option('tls-choice', type: 'combo', value: 'native', description: 'which TLS library to use',
+  choices: [
+    'native',
+    # names of native
+    'schannel', 'secure-transport', 'amissl',
+    # external deps
+    'openssl', 'gnutls', 'mbedtls', '...'
+  ]
+)
+
+# platform native SSL
+option('schannel', type: 'boolean', value: false, description: 'Windows native SSL/TLS')
+option('Secure-Transport', type: 'boolean', value: false, description: 'Apple OS native SSL/TLS')
+option('AmiSSL', type: 'boolean', value: false, description: 'Amiga native SSL/TLS')
+
+# SSL dependency selection
+option('OpenSSL', type: 'feature', value: 'auto', description: 'use OpenSSL for TLS support')
+option('GnuTLS', type: 'feature', value: 'auto', description: 'use GnuTLS for TLS support')
+option('mbedTLS', type: 'feature', value: 'auto', description: 'use mbedTLS for TLS support')
+option('wolfSSL', type: 'feature', value: 'auto', description: 'use wolfSSL for TLS support')
+option('MesaLink', type: 'feature', value: 'auto', description: 'use MesaLink for TLS support')
+option('BearSSL', type: 'feature', value: 'auto', description: 'use BearSSL for TLS support')
+option('rustls', type: 'feature', value: 'auto', description: 'use rustls for TLS support')
+option('NSS', type: 'feature', value: 'auto', description: 'use NSS for TLS support')
+
+
+# protocol support
+option('http', type: 'boolean', value: true, description: 'HTTP protocol support')
+option('ftp', type: 'boolean', value: true, description: 'FTP protocol support')
+option('file', type: 'boolean', value: true, description: 'FILE protocol support')
+option('ldap', type: 'boolean', value: true, description: 'LDAP protocol support')
+# check if ldap is supported. Consider using combo true/false/auto for UI consistency?
+option('ldaps', type: 'feature', value: 'auto', description: 'LDAPS protocol support')
+option('http', type: 'boolean', value: true, description: 'HTTP protocol support')
+
+# moar options
+option('hyper', type: 'boolean', value: true, description: '')
