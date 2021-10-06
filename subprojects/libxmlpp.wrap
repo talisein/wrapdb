@@ -1,6 +1,8 @@
 [wrap-file]
-directory = libxml++-3.0.1
-source_url = https://download.gnome.org/sources/libxml++/3.0/libxml++-3.0.1.tar.xz
-source_filename = libxml++-3.0.1.tar.xz
-source_hash = 19dc8d21751806c015179bc0b83f978e65c878724501bfc0b6c1bcead29971a6
-patch_directory = libxmlpp
+directory = libxml++-3.2.3
+source_url = https://download.gnome.org/sources/libxml++/3.2/libxml++-3.2.3.tar.xz
+source_filename = libxml++-3.2.3.tar.xz
+source_hash = 9541f6d2eede269498bb32e4193a41b631453654f407d47a876d62ab73beb7b5
+
+[provide]
+libxml++-3.0 = xmlxx_dep

@@ -1,5 +1,8 @@
 {
   "libxmlpp": {
+    "build_options": [
+      "libxmlpp:warnings=no"
+    ],
     "debian_packages": [
       "libglibmm-2.4-dev"
     ]
