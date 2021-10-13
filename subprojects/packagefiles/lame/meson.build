@@ -1,6 +1,6 @@
 project('lame', 'c',
         version : '3.100',
-        meson_version : '>=0.49',
+        meson_version : '>=0.53',
         license: 'LGPL-2.1+')
 
 cc = meson.get_compiler('c')
@@ -123,22 +123,6 @@ cdata.set('SIZEOF_UNSIGNED_SHORT', cc.sizeof('unsigned short'))
 cdata.set('ieee754_float32_t', 'float')
 cdata.set('ieee754_float64_t', 'double')
 
-have_visibility_hidden = cc.has_argument('-fvisibility=hidden')
-if have_visibility_hidden
-  add_project_arguments('-fvisibility=hidden', language: 'c')
-endif
-
-if cc.get_id() == 'msvc' and get_option('default_library') != 'static'
-  export_define = '__declspec(dllexport) extern'
-elif cc.has_argument('-fvisibility=hidden')
-  add_project_arguments('-fvisibility=hidden', language: 'c')
-  export_define = 'extern __attribute__ ((visibility ("default")))'
-else
-  export_define = 'extern'
-endif
-
-cdata.set('LAME_EXPORT', export_define)
-
 configure_file(output : 'config.h',
   configuration : cdata)
 
@@ -147,6 +131,8 @@ lameinc = include_directories('include', 'libmp3lame')
 confinc = include_directories('.')
 
 m_dep = cc.find_library('m', required : false)
+
+subdir('include')
 
 if build_decoder
   subdir('mpglib')

@@ -33,7 +33,8 @@ lamelib = library('mp3lame',
   version : '0.0.0',
   include_directories : [lameinc, confinc],
   c_args : common_args,
-  dependencies : lame_deps,
+  dependencies : lame_deps + [version_script_dep],
+  vs_module_defs: vs_def,
   install : true)
 
 lame_dep = declare_dependency(

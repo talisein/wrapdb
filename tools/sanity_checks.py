@@ -28,7 +28,7 @@ import sysconfig
 from pathlib import Path
 from utils import Version, is_ci, is_debianlike, is_linux, is_windows
 
-PERMITTED_FILES = ['generator.sh', 'meson.build', 'meson_options.txt', 'LICENSE.build']
+PERMITTED_FILES = ['generator.sh', 'meson.build', 'meson_options.txt', 'LICENSE.build', 'libtool-versionscript.py']
 PER_PROJECT_PERMITTED_FILES = {
     'openssl': [
         'bn_conf.h',
