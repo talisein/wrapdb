@@ -1,0 +1,6 @@
+[wrap-file]
+directory = proxy-libintl-0.2
+
+source_url = https://github.com/frida/proxy-libintl/archive/0.2.tar.gz
+source_filename = proxy-libintl-0.2.tar.gz
+source_hash = 2395a40f18fd7ecd199e2a9b9cbfff1ad8f9823bdfd5766a0445bbe5b5102448
