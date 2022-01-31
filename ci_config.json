@@ -9,15 +9,14 @@
   "broken_linux": [
     "arduinocore-avr",
     "openal-soft", "openh264",
-    "protobuf-c", "zstd"
+    "protobuf-c"
   ],
   "broken_windows": [
     "arduinocore-avr",
     "google-woff2", "jbigkit",
     "libgpiod", "liblbfgs", "libwebsockets",
     "mocklibc", "netstring-c", "openh264",
-    "protobuf-c", "termbox","unit-system",
-    "zstd"
+    "protobuf-c", "termbox","unit-system"
   ],
   "broken_darwin": [
     "arduinocore-avr",
@@ -25,8 +24,7 @@
     "libgpiod", "libwebsockets",
     "lz4", "mocklibc", "openal-soft",
     "openh264", "protobuf-c",
-    "rtaudio", "sdl2_image", "tinyxml2", "unit-system",
-    "zstd"
+    "rtaudio", "sdl2_image", "tinyxml2", "unit-system"
   ],
   "cli11": {
     "build_options": [
