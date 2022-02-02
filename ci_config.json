@@ -135,6 +135,11 @@
     "_comment": ["- Limited to linux_only pending the addition of other POSIX-ish environments to the test matrix."],
     "linux_only": true
   },
+  "spdlog": {
+    "build_options": [
+      "spdlog:tests=true"
+    ]
+  },
   "wayland": {
     "linux_only": true,
     "build_options": [
