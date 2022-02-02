@@ -7,11 +7,12 @@ src = [
     'cfg.cpp'
 ]
 
-fmt = 'fmt.cpp'
-
-
-if not(get_option('external_fmt'))
-src += fmt
+if not get_option('external_fmt')
+    src += 'fmt.cpp'
 endif
 
-spdlog_lib = library('spdlog', src, include_directories : inc, dependencies : spdlog_dependencies, cpp_args : spdlog_compile_args)
+spdlog_lib = library('spdlog', src,
+    include_directories: inc,
+    dependencies: spdlog_dependencies,
+    cpp_args: spdlog_compile_args,
+)
