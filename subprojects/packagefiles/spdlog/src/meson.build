@@ -15,4 +15,5 @@ spdlog_lib = library('spdlog', src,
     include_directories: inc,
     dependencies: spdlog_dependencies,
     cpp_args: spdlog_compile_args,
+    version: meson.project_version(),
 )

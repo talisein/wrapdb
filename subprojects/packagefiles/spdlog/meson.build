@@ -16,6 +16,13 @@ endif
 
 if get_option('compile_library')
     spdlog_compile_args += '-DSPDLOG_COMPILED_LIB'
+    libtype = get_option('default_library')
+    if libtype != 'static'
+        spdlog_compile_args += '-DSPDLOG_SHARED_LIB'
+    endif
+    if libtype == 'both' and meson.get_compiler('cpp').get_id() == 'msvc'
+        error('The MSVC compiler does not support default_library=both')
+    endif
     subdir('src')
 else
     spdlog_lib = []
