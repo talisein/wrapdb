@@ -1,4 +1,4 @@
-project('protobuf', 'cpp', version: '3.12.2', license: 'protobuf')
+project('protobuf', 'cpp', version: '3.18.2', license: 'protobuf')
 
 cc = meson.get_compiler('cpp')
 
@@ -17,17 +17,20 @@ deps = dependency('threads')
 libprotobuf_lite_src = [
   'src/google/protobuf/any_lite.cc',
   'src/google/protobuf/arena.cc',
+  'src/google/protobuf/arenastring.cc',
   'src/google/protobuf/extension_set.cc',
   'src/google/protobuf/generated_enum_util.cc',
   'src/google/protobuf/generated_message_table_driven_lite.cc',
   'src/google/protobuf/generated_message_util.cc',
   'src/google/protobuf/implicit_weak_message.cc',
+  'src/google/protobuf/inlined_string_field.cc',
   'src/google/protobuf/io/coded_stream.cc',
   'src/google/protobuf/io/io_win32.cc',
   'src/google/protobuf/io/strtod.cc',
   'src/google/protobuf/io/zero_copy_stream.cc',
   'src/google/protobuf/io/zero_copy_stream_impl.cc',
   'src/google/protobuf/io/zero_copy_stream_impl_lite.cc',
+  'src/google/protobuf/map.cc',
   'src/google/protobuf/message_lite.cc',
   'src/google/protobuf/parse_context.cc',
   'src/google/protobuf/repeated_field.cc',
@@ -70,6 +73,7 @@ libprotobuf_src = [
   'src/google/protobuf/empty.pb.cc',
   'src/google/protobuf/extension_set_heavy.cc',
   'src/google/protobuf/field_mask.pb.cc',
+  'src/google/protobuf/generated_message_bases.cc',
   'src/google/protobuf/generated_message_reflection.cc',
   'src/google/protobuf/generated_message_table_driven.cc',
   'src/google/protobuf/io/gzip_stream.cc',
@@ -136,6 +140,7 @@ libprotoc_src = [
   'src/google/protobuf/compiler/cpp/cpp_message.cc',
   'src/google/protobuf/compiler/cpp/cpp_message_field.cc',
   'src/google/protobuf/compiler/cpp/cpp_padding_optimizer.cc',
+  'src/google/protobuf/compiler/cpp/cpp_parse_function_generator.cc',
   'src/google/protobuf/compiler/cpp/cpp_primitive_field.cc',
   'src/google/protobuf/compiler/cpp/cpp_service.cc',
   'src/google/protobuf/compiler/cpp/cpp_string_field.cc',
@@ -168,6 +173,7 @@ libprotoc_src = [
   'src/google/protobuf/compiler/java/java_generator.cc',
   'src/google/protobuf/compiler/java/java_generator_factory.cc',
   'src/google/protobuf/compiler/java/java_helpers.cc',
+  'src/google/protobuf/compiler/java/java_kotlin_generator.cc',
   'src/google/protobuf/compiler/java/java_map_field.cc',
   'src/google/protobuf/compiler/java/java_map_field_lite.cc',
   'src/google/protobuf/compiler/java/java_message.cc',

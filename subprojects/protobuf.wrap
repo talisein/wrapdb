@@ -1,6 +1,11 @@
 [wrap-file]
-directory = protobuf-3.12.2
-source_url = https://github.com/protocolbuffers/protobuf/releases/download/v3.12.2/protobuf-all-3.12.2.tar.gz
-source_filename = protobuf-all-3.12.2.tar.gz
-source_hash = e610c6633763bceec08a647d0605f5df0f9c960028ef32c0730e3df23164fb0d
+directory = protobuf-3.18.2
+source_url = https://github.com/protocolbuffers/protobuf/releases/download/v3.18.2/protobuf-all-3.18.2.tar.gz
+source_filename = protobuf-all-3.18.2.tar.gz
+source_hash = 5675aff486e15353cb20fe0abe1fddf9d5fabc3ac2b9e84406a333cb14f7984f
 patch_directory = protobuf
+
+[provide]
+protobuf = protobuf_dep
+protobuf_lite = protobuf_lite_dep
+protoc = protoc_dep
