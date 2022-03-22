@@ -35,7 +35,7 @@ jobs:
 
       - name: Install packages
         run: |
-          pip install --pre meson
+          pip install git+https://github.com/eli-schwartz/meson@compdb-nonfatal-2
 
       - uses: ilammy/msvc-dev-cmd@v1
       - name: Sanity Checks
