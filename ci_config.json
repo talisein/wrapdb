@@ -33,6 +33,12 @@
       "cpp_std=c++14"
     ]
   },
+  "cpp-httplib": {
+    "build_options": [
+      "cpp-httplib:cpp-httplib_compile=true",
+      "cpp-httplib:cpp-httplib_test=true"
+    ]
+  },
   "cpr": {
     "debian_packages": [
       "libcurl4-gnutls-dev"
