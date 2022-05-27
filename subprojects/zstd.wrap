@@ -2,7 +2,7 @@
 directory = zstd-pr3121
 source_url = https://github.com/eli-schwartz/zstd/archive/refs/heads/pr3121.tar.gz
 source_filename = zstd-pr3121.tar.gz
-source_hash = 74f35d3c3568308b0adf3a8f17eaea49e630532bcc1a6be511484cfcebc98d57
+source_hash = f5432aaa0dff303ecb59c68eae9397d0423f8b0c4f1010da00a1835ed003747b
 patch_directory = zstd
 
 [provide]
