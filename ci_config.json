@@ -241,6 +241,9 @@
       "lmdb:programs=true"
     ]
   },
+  "lz4": {
+    "fatal_warnings": false
+  },
   "mpdecimal" : {
     "build_options": [
       "mpdecimal:examples=true",
